@@ -1,0 +1,12 @@
+{
+  "slug": "monitor-precos-actions",
+  "titulo": {"pt": "Monitor de Preços Automático", "en": "Automated Price Monitor"},
+  "descricao": {
+    "pt": "Automação em Python que roda sozinha no GitHub Actions: acompanha preços de uma lista em YAML, guarda o histórico, publica gráficos e avisa por badge e RSS quando algo cai abaixo do alvo.",
+    "en": "A Python automation that runs on its own on GitHub Actions: it tracks prices from a YAML list, keeps the history, publishes charts and alerts through a badge and RSS feed when something drops below target."
+  },
+  "stack": ["Python", "GitHub Actions", "GitHub Pages", "YAML", "RSS", "SVG"],
+  "link_demo": "https://alissonlittig.github.io/monitor-precos-actions/",
+  "link_repo": "https://github.com/alissonlittig/monitor-precos-actions",
+  "imagem_capa": "capa_1200x750.png"
+}

@@ -1,0 +1,26 @@
+name: update-prices
+on:
+  schedule:
+    - cron: "0 */3 * * *"   # a cada 3 horas / every 3 hours
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pyyaml pytest
+      - run: pytest -q tests
+      - run: python tracker.py
+        env:
+          ML_TOKEN: ${{ secrets.ML_TOKEN }}   # opcional / optional
+      - name: commit
+        run: |
+          git config user.name "price-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data docs
+          git diff --cached --quiet || git commit -m "data: atualiza precos"
+          git push

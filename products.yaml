@@ -1,0 +1,23 @@
+# Lista de produtos / Watchlist. source: coingecko (sem chave) | mercadolivre (precisa ML_TOKEN)
+currency: BRL
+products:
+  - id: bitcoin
+    name: Bitcoin
+    source: coingecko
+    target: 300000      # alerta quando cair abaixo / alert when below
+  - id: ethereum
+    name: Ethereum
+    source: coingecko
+    target: 12000
+  - id: solana
+    name: Solana
+    source: coingecko
+    target: 700
+  - id: dogecoin
+    name: Dogecoin
+    source: coingecko
+    target: 0.8
+  # - id: MLB3871227171     # exemplo Mercado Livre (item id)
+  #   name: Teclado mecânico
+  #   source: mercadolivre
+  #   target: 250
